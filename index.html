@@ -11,9 +11,22 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/44ffe32be8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .rotateImg {
+        transform: perspective(100px) rotateX(-2deg) rotateY(-2deg);
+      }
+      .rotateShape {
+        transform: perspective(80px) rotateX(2deg) rotateY(2deg);
+      }
+    </style>
   </head>
   <body>
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto">
       <div class="bg-white p-6 rounded-lg shadow-lg">
         <form
           id="template-form"
@@ -151,7 +164,150 @@
       </div>
 
       <!-- template section -->
-      <section></section>
+      <section>
+        <div>
+          <!-- template1 -->
+          <section class="mt-10">
+            <h1 class="text-3xl font-bold text-center mb-2">Template 1</h1>
+            <div
+              class="template min-h-screen bg-[#0A2449] shadow-black rounded"
+            >
+              <div
+                class="py-12 px-2 lg:px-8 flex flex-col md:flex-row justify-between items-center"
+              >
+                <!-- template body -->
+                <div class="flex-1">
+                  <div class="flex items-center gap-3">
+                    <div class="rounded-full border border-yellow-800">
+                      <img
+                        src="./image/logo1.png"
+                        alt="Company Logo"
+                        class="company-logo w-12 h-12 rounded"
+                      />
+                    </div>
+                    <p
+                      class="company-name mt-2 font-bold text-2xl text-gray-100"
+                    >
+                      PlanPostAI
+                    </p>
+                  </div>
+
+                  <h1
+                    class="template-heading md:mt-16 mt-8 text-5xl lg:text-7xl max-w-sm font-bold text-[#ECA710] secondaryColor"
+                  >
+                    Pure <br />
+                    Elegance in Every Drop
+                  </h1>
+                  <h2
+                    class="template-subheading md:mt-12 mt-6 max-w-lg text-4xl text-gray-100"
+                  >
+                    Experience the Luxury of Premium Experience the Luxury of
+                    Premium Water Experience the Luxury of Premium Water
+                  </h2>
+
+                  <button
+                    class="template-button btn md:mt-16 mt-8 text-2xl border-none rounded-full text-gray-100 bg-[#ECA710] secondaryBg"
+                  >
+                    <i class="fa-solid fa-circle-play"></i> LEARN MORE
+                  </button>
+
+                  <div
+                    class="md:mt-12 mt-6 text-gray-100 flex gap-3 items-center"
+                  >
+                    <i class="fa-solid fa-tty text-7xl"></i>
+                    <div class="text-xl">
+                      <p class="template-phone">Phone : 123-456-7890</p>
+                      <p class="template-email">
+                        Email : hello@reallygrasite.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- template image -->
+                <div class="relative flex-1 pt-20">
+                  <img
+                    src="./image/templated1.jpg"
+                    alt="Template Image"
+                    class="template-image w-3/4 mx-auto h-3/4 rounded-md rotateImg"
+                  />
+                  <div
+                    class="absolute top-10 right-10 w-3/4 mx-auto h-3/4 border-4 border-b-yellow-800 rotateShape"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- template2 -->
+          <section class="mt-10">
+            <h1 class="text-3xl font-bold text-center mb-2">Template 2</h1>
+            <div
+              class="template min-h-screen bg-[#08062B] shadow-black rounded"
+            >
+              <div class="flex flex-col md:flex-row justify-between">
+                <!-- template body -->
+                <div class="py-12 lg:py-24 px-2 lg:px-8 flex-1">
+                  <div class="flex items-center gap-3">
+                    <div class="rounded-full">
+                      <img
+                        src="./image/logo3.png"
+                        alt="Company Logo"
+                        class="company-logo w-12 h-12 rounded"
+                      />
+                    </div>
+                    <p
+                      class="company-name mt-2 font-bold text-2xl text-gray-100"
+                    >
+                      Leceria & Co.
+                    </p>
+                  </div>
+
+                  <h1
+                    class="template-heading md:mt-20 mt-8 text-5xl lg:text-7xl text-[#E71D23] font-bold uppercase secondaryColor"
+                  >
+                    Pure Elegance in Every Drop
+                  </h1>
+                  <h2
+                    class="template-subheading md:mt-16 mt-6 max-w-lg text-4xl text-gray-100"
+                  >
+                    Experience the Luxury of Premium Experience the Luxury of
+                    Premium Water Experience the Luxury of Premium Water
+                  </h2>
+
+                  <button
+                    class="template-button btn md:mt-44 mt-8 text-xl border-none text-gray-100 bg-gradient-to-r from-[#E71D23] to-[#08062B] p-2 secondaryBg"
+                  >
+                    Learn More
+                  </button>
+
+                  <div class="mt-10 text-xl text-gray-100">
+                    <p>
+                      <i class="fa-solid fa-phone-volume"></i>
+                      <span class="template-phone ml-2">123-456-7890</span>
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-globe"></i>
+                      <span class="template-email ml-2"
+                        >hello@reallygrasite.com</span
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <!-- template image -->
+                <div class="relative flex-1">
+                  <img
+                    src="./image/template3.jpg"
+                    alt="Template Image"
+                    class="template-image w-full h-full rounded-bl-full rounded-tl-full border-4"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </div>
 
     <script src="./js/scripts.js"></script>
