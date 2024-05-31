@@ -17,14 +17,22 @@ const updateTemplates = async (event) => {
   const logo = await imageUpload(logoFile);
   console.log(logo);
 
-  const templateFile = templateImage;
-  const templateImg = await imageUpload(templateFile);
+  const templateImgFile = templateImage;
+  const templateImg = await imageUpload(templateImgFile);
   console.log(templateImg);
 
+  // hosting image
+
   const templates = document.querySelectorAll(".template");
+  const secondaryBg = document.querySelectorAll(".secondaryBg");
+  const secondaryTextColors = document.querySelectorAll(".secondaryColor");
   templates.forEach((template) => {
     template.style.backgroundColor = primaryColor;
     template.style.color = secondaryColor;
+
+    secondaryBg.forEach((ele) => (ele.style.backgroundColor = secondaryColor));
+
+    secondaryTextColors.forEach((ele) => (ele.style.color = secondaryColor));
 
     const templateHeading = template.querySelector(".template-heading");
     const templateSubheading = template.querySelector(".template-subheading");

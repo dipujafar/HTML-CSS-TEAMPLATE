@@ -29,6 +29,29 @@
       .fancy-border2 {
         border-radius: 100% 0% 34% 66% / 70% 0% 100% 30%;
       }
+      .shape1 {
+        clip-path: polygon(45% 0, 100% 0, 100% 50%, 100% 100%, 40% 100%, 0 53%);
+      }
+      .shape2 {
+        clip-path: polygon(15% 0, 85% 0, 95% 51%, 85% 99%, 15% 100%, 5% 50%);
+      }
+      .shape3 {
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100% 60%,
+          100% 100%,
+          25% 100%,
+          0 62%,
+          32% 25%
+        );
+      }
+      .shape4 {
+        clip-path: polygon(0 0, 80% 2%, 100% 50%, 80% 100%, 0 98%, 0% 50%);
+      }
+      .shape5 {
+        clip-path: polygon(3% 38%, 100% 2%, 100% 100%, 0 38%);
+      }
     </style>
   </head>
   <body>
@@ -245,7 +268,7 @@
                   </h2>
 
                   <button
-                    class="template-button btn md:mt-16 mt-8 text-2xl border-none rounded-full text-gray-100 bg-[#ECA710] secondaryBg"
+                    class="template-button btn md:mt-16 mt-8 text-xl border-none rounded-full text-gray-100 bg-[#ECA710] px-4 py-2 secondaryBg"
                   >
                     <i class="fa-solid fa-circle-play"></i> LEARN MORE
                   </button>
@@ -315,7 +338,7 @@
                   </h2>
 
                   <button
-                    class="template-button btn md:mt-44 mt-8 text-xl border-none text-gray-100 bg-gradient-to-r from-[#E71D23] to-[#08062B] p-2 secondaryBg"
+                    class="template-button btn md:mt-44 mt-8 text-xl border-none text-gray-100 bg-[#E71D23] px-4 py-2 secondaryBg"
                   >
                     Learn More
                   </button>
@@ -337,7 +360,7 @@
                 <!-- template image -->
                 <div class="relative flex-1">
                   <img
-                    src="./image/template2.jpg"
+                    src="./image/teamplate4.jpg"
                     alt="Template Image"
                     class="template-image w-full h-full fancy-border2 border-4"
                   />
@@ -349,6 +372,93 @@
           <!-- template3 -->
           <section class="mt-10">
             <h1 class="text-3xl font-bold text-center mb-2">Template 3</h1>
+            <div
+              class="template min-h-screen bg-[#25497D] shadow-black rounded"
+            >
+              <div class="flex flex-col md:flex-row justify-between">
+                <!-- template body -->
+                <div class="py-6 lg:py-12 md:w-3/5">
+                  <div class="flex items-center gap-3 px-8 lg:px-14">
+                    <div class="rounded-full">
+                      <img
+                        src="./image/logo4.png"
+                        alt="Company Logo"
+                        class="company-logo w-12 h-12 rounded"
+                      />
+                    </div>
+                    <p
+                      class="company-name mt-2 font-bold text-2xl text-[#E8D339] secondaryColor"
+                    >
+                      Leceria & Co.
+                    </p>
+                  </div>
+
+                  <div class="px-8 lg:px-14">
+                    <h1
+                      class="template-heading md:mt-10 mt-5 text-4xl lg:text-6xl text-gray-100 font-bold uppercase max-w-2xl border-l-8 border-yellow-500 pl-4"
+                    >
+                      The Best Digital Marketing Agency in West Jakarta
+                    </h1>
+                  </div>
+
+                  <div
+                    class="md:mt-24 mt-6 bg-[#E8D339] secondaryBg px-4 lg:px-14 py-10 lg:py-10 shape4"
+                  >
+                    <h2
+                      class="template-subheading max-w-lg text-4xl text-gray-900"
+                    >
+                      Experience the Luxury of Premium Experience the Luxury of
+                      Premium Water Experience the Luxury of Premium Water
+                    </h2>
+                  </div>
+
+                  <div class="px-8 lg:px-14">
+                    <button
+                      class="template-button btn md:mt-44 mt-8 text-xl border-none text-gray-10 px-4 py-2 bg-[#E8D339] secondaryBg"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+
+                <!-- template image -->
+                <div
+                  class="relative flex-1 flex flex-col justify-center items-center shape3 bg-[#112546]"
+                >
+                  <div
+                    class="text-gray-100 h-1/3 flex flex-col justify-center items-center"
+                  >
+                    <button
+                      class="btn uppercase bg-[#25497D] text-[#E8D339] border-none shape2 px-10"
+                    >
+                      Contact Us
+                    </button>
+                    <div class="mt-2 text-xl text-gray-100">
+                      <p>
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span class="template-phone">123-456-7890</span>
+                      </p>
+                      <p>
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="template-email"
+                          >hello@reallygrasite.com</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    src="./image/teamplate5.jpg"
+                    alt="Template Image"
+                    class="template-image w-full h-full shape1 border-4"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- template4 -->
+          <section class="mt-10">
+            <h1 class="text-3xl font-bold text-center mb-2">Template 4</h1>
             <div
               class="template min-h-screen bg-[#1C2449] shadow-black rounded"
             >
@@ -379,6 +489,9 @@
                   <div
                     class="absolute top-0 right-0 py-16 w-4/5 md:w-1/2 lg:w-1/4 border-4 border-white rounded-bl-full rounded-br-[4000px]"
                   ></div>
+                  <div
+                    class="absolute bottom-20 bg-[#FC922F] secondaryColor md:w-1/4 h-24 right-0 shape5 secondaryColo"
+                  ></div>
                 </div>
 
                 <!-- template body -->
@@ -397,7 +510,7 @@
                     </h2>
 
                     <button
-                      class="template-button btn md:mt-10 mt-4 text-xl border-none text-gray-100 bg-gradient-to-r from-[#FC922F] to-[#08062B] p-2 secondaryBg"
+                      class="template-button btn md:mt-10 mt-4 text-xl border-none text-gray-100 bg-[#FC922F] px-4 py-2 secondaryBg"
                     >
                       Learn More
                     </button>
