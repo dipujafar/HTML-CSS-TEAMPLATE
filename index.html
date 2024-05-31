@@ -23,145 +23,184 @@
       .rotateShape {
         transform: perspective(80px) rotateX(2deg) rotateY(2deg);
       }
+      .fancy-border1 {
+        border-radius: 0% 100% 0% 100% / 49% 0% 100% 51%;
+      }
+      .fancy-border2 {
+        border-radius: 100% 0% 34% 66% / 70% 0% 100% 30%;
+      }
     </style>
   </head>
   <body>
     <div class="container mx-auto">
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <form
-          id="template-form"
-          class="space-y-4"
-          onsubmit="updateTemplates(event)"
-        >
-          <div>
-            <label for="heading" class="block text-sm font-medium text-gray-700"
-              >Heading:</label
-            >
-            <input
-              type="text"
-              name="heading"
-              maxlength="40"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label
-              for="subheading"
-              class="block text-sm font-medium text-gray-700"
-              >Subheading:</label
-            >
-            <input
-              type="text"
-              name="subheading"
-              maxlength="60"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label
-              for="action-button"
-              class="block text-sm font-medium text-gray-700"
-              >Action Button:</label
-            >
-            <input
-              type="text"
-              name="actionButton"
-              maxlength="15"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700"
-              >Email:</label
-            >
-            <input
-              type="email"
-              name="email"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label for="phone" class="block text-sm font-medium text-gray-700"
-              >Phone Number:</label
-            >
-            <input
-              type="tel"
-              name="phone"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label
-              for="company-name"
-              class="block text-sm font-medium text-gray-700"
-              >Company Name:</label
-            >
-            <input
-              type="text"
-              name="companyName"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label
-              for="company-logo"
-              class="block text-sm font-medium text-gray-700"
-              >Company Logo URL:</label
-            >
-            <input
-              type="url"
-              name="companyLogo"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label
-              for="template-image"
-              class="block text-sm font-medium text-gray-700"
-              >Template Image URL:</label
-            >
-            <input
-              type="url"
-              name="templateImage"
-              class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
-            />
-          </div>
-          <div>
-            <label
-              for="primary-color"
-              class="block text-sm font-medium text-gray-700"
-              >Primary Color:</label
-            >
-            <input
-              type="color"
-              value="#253f4b"
-              name="primaryColor"
-              class="w-full rounded-md"
-            />
-          </div>
-          <div>
-            <label
-              for="secondary-color"
-              class="block text-sm font-medium text-gray-700"
-              >Secondary Color:</label
-            >
-            <input
-              value="#253f4b"
-              type="color"
-              name="secondaryColor"
-              class="w-full rounded-md"
-            />
-          </div>
-          <div>
-            <button
-              type="submit"
-              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-600"
-            >
-              Update Templates
-            </button>
-          </div>
-        </form>
-      </div>
+      <!-- input form section  -->
+      <section>
+        <h1 class="text-3xl font-bold text-center py-2">Input Form</h1>
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+          <form
+            id="template-form"
+            class="space-y-4"
+            onsubmit="updateTemplates(event)"
+          >
+            <div class="flex flex-col md:flex-row gap-2 justify-between">
+              <!-- input heading -->
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Heading:</label
+                >
+                <input
+                  type="text"
+                  name="heading"
+                  minlength="40"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+
+              <!-- input subHeading -->
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Subheading:</label
+                >
+                <input
+                  type="text"
+                  name="subheading"
+                  minlength="60"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-2 justify-between">
+              <!-- input email -->
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Email:</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+
+              <!-- input phone  -->
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Phone Number:</label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-2 justify-between">
+              <!-- input company Name -->
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Company Name:</label
+                >
+                <input
+                  type="text"
+                  name="companyName"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+
+              <!-- input action button text -->
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Action Button:</label
+                >
+                <input
+                  type="text"
+                  name="actionButton"
+                  minlength="15"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-2 justify-between">
+              <!-- input logo -->
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Company Logo
+                </label>
+                <input
+                  type="file"
+                  name="companyLogo"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+
+              <!-- input template Image -->
+              <div class="flex-1">
+                <label
+                  for="template-image"
+                  class="block text-sm font-medium text-gray-700"
+                  >Template Image
+                </label>
+                <input
+                  type="file"
+                  name="templateImage"
+                  required
+                  class="mt-1 block w-full border-black px-2 py-1 bg-gray-200 rounded-md shadow-sm"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-2 justify-between">
+              <!-- input primary color -->
+              <div class="flex-1">
+                <label
+                  for="primary-color"
+                  class="block text-sm font-medium text-gray-700"
+                  >Primary Color:</label
+                >
+                <input
+                  type="color"
+                  value="#253f4b"
+                  name="primaryColor"
+                  class="w-full rounded-md"
+                />
+              </div>
+
+              <!-- input secondary color -->
+              <div class="flex-1">
+                <label
+                  for="secondary-color"
+                  class="block text-sm font-medium text-gray-700"
+                  >Secondary Color:</label
+                >
+                <input
+                  value="#F39F13"
+                  type="color"
+                  name="secondaryColor"
+                  class="w-full rounded-md"
+                />
+              </div>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-600"
+              >
+                Update Templates
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
 
       <!-- template section -->
       <section>
@@ -227,12 +266,12 @@
                 <!-- template image -->
                 <div class="relative flex-1 pt-20">
                   <img
-                    src="./image/templated1.jpg"
+                    src="./image/template3.jpg"
                     alt="Template Image"
                     class="template-image w-3/4 mx-auto h-3/4 rounded-md rotateImg"
                   />
                   <div
-                    class="absolute top-10 right-10 w-3/4 mx-auto h-3/4 border-4 border-b-yellow-800 rotateShape"
+                    class="absolute top-10 right-10 w-3/4 mx-auto h-3/4 border-4 border-yellow-800 rotateShape"
                   ></div>
                 </div>
               </div>
@@ -251,7 +290,7 @@
                   <div class="flex items-center gap-3">
                     <div class="rounded-full">
                       <img
-                        src="./image/logo3.png"
+                        src="./image/logo2.png"
                         alt="Company Logo"
                         class="company-logo w-12 h-12 rounded"
                       />
@@ -298,10 +337,86 @@
                 <!-- template image -->
                 <div class="relative flex-1">
                   <img
+                    src="./image/template2.jpg"
+                    alt="Template Image"
+                    class="template-image w-full h-full fancy-border2 border-4"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- template3 -->
+          <section class="mt-10">
+            <h1 class="text-3xl font-bold text-center mb-2">Template 3</h1>
+            <div
+              class="template min-h-screen bg-[#1C2449] shadow-black rounded"
+            >
+              <div>
+                <!-- template image -->
+                <div class="relative flex-1">
+                  <img
                     src="./image/template3.jpg"
                     alt="Template Image"
-                    class="template-image w-full h-full rounded-bl-full rounded-tl-full border-4"
+                    class="template-image w-full h-[75vh] min-h-[75vh] scale-y-100 fancy-border1 border-b-[40px] border-[#13367A]"
                   />
+                  <div
+                    class="absolute top-0 right-0 bg-[#13367A] flex items-center gap-3 py-12 w-4/5 md:w-1/2 lg:w-1/4 px-4 md:pl-20 rounded-bl-full rounded-br-[7000px]"
+                  >
+                    <div class="rounded-full">
+                      <img
+                        src="./image/logo3.png"
+                        alt="Company Logo"
+                        class="company-logo w-12 h-12 rounded-full"
+                      />
+                    </div>
+                    <p
+                      class="company-name mt-2 font-bold text-2xl text-gray-100"
+                    >
+                      Leceria & Co.
+                    </p>
+                  </div>
+                  <div
+                    class="absolute top-0 right-0 py-16 w-4/5 md:w-1/2 lg:w-1/4 border-4 border-white rounded-bl-full rounded-br-[4000px]"
+                  ></div>
+                </div>
+
+                <!-- template body -->
+                <div class="flex-1">
+                  <div class="px-2 lg:px-10">
+                    <h1
+                      class="template-heading max-w-4xl md:mt-20 mt-8 text-5xl lg:text-7xl text-[#FC922F] font-bold uppercase secondaryColor"
+                    >
+                      Experience the Luxury of Premium Water
+                    </h1>
+                    <h2
+                      class="template-subheading mt-4 md:mt-10 text-4xl text-gray-100"
+                    >
+                      Experience the Luxury of Premium Experience the Luxury of
+                      Premium Water Experience the Luxury of Premium Water
+                    </h2>
+
+                    <button
+                      class="template-button btn md:mt-10 mt-4 text-xl border-none text-gray-100 bg-gradient-to-r from-[#FC922F] to-[#08062B] p-2 secondaryBg"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+
+                  <div
+                    class="mt-10 text-2xl font-medium text-black bg-gray-300 text-center flex justify-center gap-3"
+                  >
+                    <p>
+                      <i class="fa-solid fa-phone-volume"></i>
+                      <span class="template-phone ml-2">123-456-7890</span>
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-globe"></i>
+                      <span class="template-email ml-2"
+                        >hello@reallygrasite.com</span
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -310,6 +425,8 @@
       </section>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/hostImage.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

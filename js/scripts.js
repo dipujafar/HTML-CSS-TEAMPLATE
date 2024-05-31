@@ -1,4 +1,4 @@
-const updateTemplates = (event) => {
+const updateTemplates = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
 
@@ -12,6 +12,14 @@ const updateTemplates = (event) => {
   const templateImage = formData.get("templateImage");
   const primaryColor = formData.get("primaryColor");
   const secondaryColor = formData.get("secondaryColor");
+
+  const logoFile = companyLogo;
+  const logo = await imageUpload(logoFile);
+  console.log(logo);
+
+  const templateFile = templateImage;
+  const templateImg = await imageUpload(templateFile);
+  console.log(templateImg);
 
   const templates = document.querySelectorAll(".template");
   templates.forEach((template) => {
@@ -33,7 +41,7 @@ const updateTemplates = (event) => {
     templateEmail.textContent = `Email: ${email}`;
     templatePhone.textContent = `Phone: ${phone}`;
     templateCompanyName.textContent = companyName;
-    templateImageElem.src = templateImage;
-    templateLogo.src = companyLogo;
+    templateImageElem.src = templateImg;
+    templateLogo.src = logo;
   });
 };
